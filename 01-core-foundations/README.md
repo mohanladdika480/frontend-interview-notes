@@ -11,7 +11,8 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 | 1 | [What is React?](#1-what-is-react) |
 | 2 | [How React Works?](#2-how-react-works) |
 | 3 | [What are the advantages of React?](#3-what-are-the-advantages-of-react) |
-| 4 | [Disadvantages of React](#disadvantages-of-react) |
+| 4 | [What are the disadvantages of React?](#4-what-are-the-disadvantages-of-react) |
+| 5 | [What are the major features of React?](#5-what-are-the-major-features-of-react)
 | 5 | [React vs Angular vs Vue](#react-vs-angular-vs-vue) |
 | 6 | [When to Choose What](#when-to-choose-what) |
 | 7 | [Virtual DOM](#virtual-dom) |
@@ -81,3 +82,49 @@ It focuses only on the **view layer (UI)** of an application, making it a librar
    - React supports scalability by enabling modular architecture and efficient state management, making it suitable for large-scale applications.
 
 ---
+
+## 4. What are the disadvantages of React?
+
+1. React is only a UI library, so features like routing, state management, and API handling are not built-in and require external libraries.  
+
+2. It has a steep learning curve for beginners due to concepts like JSX, hooks, and state management.  
+
+3. There are too many choices in the ecosystem (e.g., Redux, Context API, Zustand), which can lead to confusion in deciding the right approach.  
+
+4. React has frequent updates and evolving patterns, requiring developers to continuously stay updated.  
+
+5. SEO can be an issue in client-side rendered applications, but this can be addressed using server-side rendering frameworks like Next.js.
+
+---
+
+## 5. What are the major features of React?
+
+### 🔹 Core Features
+
+- **Component-Based Architecture**: Breaks UI into reusable, independent components, improving maintainability and scalability  
+
+- **JSX (JavaScript XML)**: Allows writing HTML-like syntax inside JavaScript, making UI code more readable  
+
+- **Virtual DOM & Reconciliation**: Uses a virtual representation of the DOM and updates only changed parts efficiently  
+
+- **Declarative UI**: Developers describe how UI should look, and React handles updates  
+
+- **One-Way Data Flow**:Data flows from parent to child, making state predictable and easier to debug  
+
+- **Hooks**: Enable state and lifecycle features in functional components (e.g., useState, useEffect)  
+
+
+### 🚀 Advanced Features
+
+- **Context API**: Avoids prop drilling by sharing data globally  
+
+- **Error Boundaries**: Handle runtime errors in UI without crashing the entire app  
+
+- **Concurrent Rendering**: Improves responsiveness by prioritizing important updates  
+
+- **React Server Components**: Reduce client-side JavaScript and improve performance  
+
+- **Suspense**: Handles loading states for async operations (like data fetching or lazy loading)
+
+---
+
