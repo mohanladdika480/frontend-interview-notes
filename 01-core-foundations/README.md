@@ -9,7 +9,7 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 | # | 📌 Topic |
 |--|--------|
 | 1 | [What is React?](#1-what-is-react) |
-| 2 | [How React Works](#how-react-works) |
+| 2 | [How React Works?](#2how-react-works) |
 | 3 | [Benefits of React](#benefits-of-react) |
 | 4 | [Disadvantages of React](#disadvantages-of-react) |
 | 5 | [React vs Angular vs Vue](#react-vs-angular-vs-vue) |
@@ -38,4 +38,20 @@ React uses a Virtual DOM along with a reconciliation process to update only the 
 
 It also follows a one-way data flow, making applications more predictable, easier to debug, and easier to maintain.
 
+It focuses only on the **view layer (UI)** of an application, making it a library rather than a full framework.
+
 ---
+
+## 2. How React Works?
+
+1. When a component is initially rendered, React creates a Virtual DOM (V-DOM), which is a lightweight copy of the real DOM.  
+
+2. When state or props change, React creates a new Virtual DOM.  
+
+3. React compares the new Virtual DOM with the previous one to identify the changes. This process is called Reconciliation (Diffing Algorithm).  
+
+4. Only the changed parts are updated in the real DOM instead of re-rendering the entire UI.
+
+--- 
+
+
