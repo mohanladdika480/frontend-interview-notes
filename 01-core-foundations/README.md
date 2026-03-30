@@ -4,7 +4,10 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 
 ---
 
-### Table of Contents
+<details close>
+<summary>📚 Table of Contents (Click to Expand/Collapse)</summary>
+
+<br>
 
 | # | 📌 Topic |
 |--|--------|
@@ -26,6 +29,8 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 | 15 | [SPA vs MPA](#spa-vs-mpa) |
 | 16 | [CSR vs SSR vs SSG](#csr-vs-ssr-vs-ssg) |
 | 17 | [Hydration](#hydration) |
+
+</details>
 
 ---
 
