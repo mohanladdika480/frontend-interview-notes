@@ -24,3 +24,20 @@ It serves as both a learning resource and a preparation guide for developers aim
 - 📚 A consistent and structured learning path  
 
 </details>
+
+---
+
+## 📚 Table of Contents
+
+- ⚛️ [Core Foundations](./01-core-foundations/README.md)
+- 🧩 [Components & Rendering](./02-components-rendering/README.md)
+- 🔗 [Hooks](./03-hooks/README.md)
+- 🗂️ [State Management](./04-state-management/README.md)
+- 🌐 [Routing](./05-routing/README.md)
+- 🔄 [Data Fetching](./06-data-fetching/README.md)
+- ⚡ [Performance Optimization](./07-performance/README.md)
+- 🚀 [Advanced Concepts](./08-advanced-concepts/README.md)
+- 🏗️ [Architecture & Best Practices](./09-architecture/README.md)
+- 🔍 [Ecosystem & Comparisons](./10-ecosystem/README.md)
+
+---
