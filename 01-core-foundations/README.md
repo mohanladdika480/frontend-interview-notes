@@ -1,9 +1,9 @@
-# ⚛️ Core Foundations
+### ⚛️ Core Foundations
 
 A structured overview of fundamental React concepts. Click any topic to explore details.
 
 ---
-
+<a name="table-of-contents"></a>
 <details close>
 <summary>📚 Table of Contents (Click to Expand/Collapse)</summary>
 
