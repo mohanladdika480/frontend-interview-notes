@@ -44,13 +44,13 @@ It focuses only on the **view layer (UI)** of an application, making it a librar
 
 ## 2. How React Works?
 
-1. When a component is initially rendered, React creates a Virtual DOM (V-DOM), which is a lightweight copy of the real DOM.  
+- When a component is initially rendered, React creates a Virtual DOM (V-DOM), which is a lightweight copy of the real DOM.  
 
-2. When state or props change, React creates a new Virtual DOM.  
+- When state or props change, React creates a new Virtual DOM.  
 
-3. React compares the new Virtual DOM with the previous one to identify the changes. This process is called Reconciliation (Diffing Algorithm).  
+- React compares the new Virtual DOM with the previous one to identify the changes. This process is called Reconciliation (Diffing Algorithm).  
 
-4. Only the changed parts are updated in the real DOM instead of re-rendering the entire UI.
+- Only the changed parts are updated in the real DOM instead of re-rendering the entire UI.
 
 --- 
 
