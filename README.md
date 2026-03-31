@@ -29,7 +29,7 @@ It serves as both a learning resource and a preparation guide for developers aim
 
 ## 📚 Table of Contents
 
-- ⚛️ [Core Foundations](./React/01-core-foundations.md)
+- ⚛️ [Core Foundations](./01-core-foundations.md)
 - 🧩 [Components & Rendering](./React/02-components-rendering/README.md)
 - 🔗 [Hooks](./03-hooks/README.md)
 - 🗂️ [State Management](./04-state-management/README.md)
