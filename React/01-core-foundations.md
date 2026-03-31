@@ -17,19 +17,13 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 | 3 | [What are the advantages of React?](#3-what-are-the-advantages-of-react) |
 | 4 | [What are the disadvantages of React?](#4-what-are-the-disadvantages-of-react) |
 | 5 | [What are the major features of React?](#5-what-are-the-major-features-of-react)
-| 5 | [React vs Angular vs Vue](#react-vs-angular-vs-vue) |
-| 6 | [When to Choose What](#when-to-choose-what) |
-| 7 | [Virtual DOM](#virtual-dom) |
-| 8 | [How does Virtual DOM Works](#how-virtual-dom-works) |
-| 9 | [Reconciliation (Diffing Algorithm)](#reconciliation-diffing-algorithm) |
-| 10 | [Component Rendering Process](#component-rendering-process) |
-| 11 | [React Fiber](#react-fiber) |
-| 12 | [Real DOM vs Virtual DOM vs Shadow DOM](#real-dom-vs-virtual-dom-vs-shadow-dom) |
-| 13 | [Reflow & Repaint](#reflow--repaint) |
-| 14 | [Library vs Framework](#library-vs-framework) |
-| 15 | [SPA vs MPA](#spa-vs-mpa) |
-| 16 | [CSR vs SSR vs SSG](#csr-vs-ssr-vs-ssg) |
-| 17 | [Hydration](#hydration) |
+| 6 | [Virtual DOM](#virtual-dom) |
+| 7 | [How does Virtual DOM Works](#how-virtual-dom-works) |
+| 8 | [Reconciliation (Diffing Algorithm)](#reconciliation-diffing-algorithm) |
+| 9 | [Component Rendering Process](#component-rendering-process) |
+| 10 | [React Fiber](#react-fiber) |
+| 11 | [Real DOM vs Virtual DOM vs Shadow DOM](#real-dom-vs-virtual-dom-vs-shadow-dom) |
+| 12 | [Reflow & Repaint](#reflow--repaint) |
 
 </details>
 
