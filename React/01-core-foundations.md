@@ -17,9 +17,8 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 | 3 | [What are the advantages of React?](#3-what-are-the-advantages-of-react) |
 | 4 | [What are the disadvantages of React?](#4-what-are-the-disadvantages-of-react) |
 | 5 | [What are the major features of React?](#5-what-are-the-major-features-of-react)
-| 6 | [Virtual DOM](#virtual-dom) |
-| 7 | [How does Virtual DOM Works](#how-virtual-dom-works) |
-| 8 | [Reconciliation (Diffing Algorithm)](#reconciliation-diffing-algorithm) |
+| 6 | [What is Virtual DOM and how does it work?](#6-what-is-virtual-dom-and-how-does-it-work) |
+| 8 | [What is Reconciliation (Diffing Algorithm)?](#7-what-is-reconciliation-diffing-algorithm) |
 | 9 | [Component Rendering Process](#component-rendering-process) |
 | 10 | [React Fiber](#react-fiber) |
 | 11 | [Real DOM vs Virtual DOM vs Shadow DOM](#real-dom-vs-virtual-dom-vs-shadow-dom) |
@@ -47,13 +46,11 @@ It focuses only on the **view layer (UI)** of an application, making it a librar
 
 ## 2. How React Works?
 
-- When a component is initially rendered, React creates a Virtual DOM (V-DOM), which is a lightweight copy of the real DOM.  
-
-- When state or props change, React creates a new Virtual DOM.  
-
-- React compares the new Virtual DOM with the previous one to identify the changes. This process is called Reconciliation (Diffing Algorithm).  
-
-- Only the changed parts are updated in the real DOM instead of re-rendering the entire UI.
+1. State or props change triggers a re-render.  
+2. React creates a new Virtual DOM tree.  
+3. It compares it with the previous Virtual DOM (reconciliation).  
+4. Only the changed parts are updated in the real DOM.  
+5. Updates are batched and optimized using techniques like concurrent rendering.  
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -120,6 +117,50 @@ It focuses only on the **view layer (UI)** of an application, making it a librar
 - **Concurrent Rendering**: Improves responsiveness by prioritizing important updates  
 - **React Server Components**: Reduce client-side JavaScript and improve performance  
 - **Suspense**: Handles loading states for async operations (like data fetching or lazy loading)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+## 6. What is Virtual DOM and how does it work?
+
+Virtual DOM is a lightweight JavaScript representation of the real DOM. React uses it to efficiently track changes in the UI and update only the necessary parts of the real DOM instead of re-rendering the entire page.
+
+### Working:
+
+1. When a component is initially rendered, React creates a Virtual DOM tree.  
+2. When state or props change, React creates a new Virtual DOM.  
+3. React compares the new Virtual DOM with the previous one using reconciliation (diffing algorithm).  
+4. React identifies the differences between the two Virtual DOM trees.  
+5. Only the changed elements are updated in the real DOM.  
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+## 7. What is Reconciliation (Diffing Algorithm)?
+
+Reconciliation is the process by which React compares the previous Virtual DOM with the new Virtual DOM to identify differences and efficiently update only the changed parts in the real DOM.
+
+### Heuristic Rules
+
+React uses heuristics like element type and keys to optimize the diffing process and reduce complexity from O(n³) to O(n).
+
+1. **Different Element Types**  
+   Old: `<div>` → New: `<span>`  
+   → React replaces the entire subtree  
+
+2. **Same Element Type**  
+   `<div>` → `<div>`  
+   → React updates only the changed attributes  
+
+3. **Lists with Keys 🔥**  
+   Keys help React identify:
+   - Which items changed  
+   - Which items moved  
+   - Which items were added or removed  
+
+   → Without keys, React may cause poor performance and UI bugs  
 
 **[⬆ Back to Top](#table-of-contents)**
 
