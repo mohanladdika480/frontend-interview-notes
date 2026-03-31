@@ -19,7 +19,7 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 | 5 | [What are the major features of React?](#5-what-are-the-major-features-of-react)
 | 6 | [What is Virtual DOM and how does it work?](#6-what-is-virtual-dom-and-how-does-it-work) |
 | 8 | [What is Reconciliation (Diffing Algorithm)?](#7-what-is-reconciliation-diffing-algorithm) |
-| 9 | [Component Rendering Process](#component-rendering-process) |
+| 9 | [What are the phases of React rendering?](#8-what-are-the-phases-of-react-rendering) |
 | 10 | [React Fiber](#react-fiber) |
 | 11 | [Real DOM vs Virtual DOM vs Shadow DOM](#real-dom-vs-virtual-dom-vs-shadow-dom) |
 | 12 | [Reflow & Repaint](#reflow--repaint) |
@@ -165,3 +165,6 @@ React uses heuristics like element type and keys to optimize the diffing process
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
+
+## 8. What are the phases of React rendering?
+
