@@ -37,7 +37,157 @@ It serves as both a learning resource and a preparation guide for developers aim
 - 🔄 [Data Fetching](./06-data-fetching/README.md)
 - ⚡ [Performance Optimization](./07-performance/README.md)
 - 🚀 [Advanced Concepts](./08-advanced-concepts/README.md)
-- 🏗️ [Architecture & Best Practices](./09-architecture/README.md)
+- 🏗️ [Architecture, Security & Best Practices](./09-architecture/README.md)
 - 🔍 [Ecosystem & Comparisons](./10-ecosystem/README.md)
 
 ---
+
+### [⚛️ Core Foundations](./React/01-core-foundations.md)
+- What is React?
+- How React Works
+- Advantages & Disadvantages
+- Key Features
+- Library vs Framework
+- Virtual DOM & How it Works
+- Reconciliation (Diffing Algorithm)
+- Component Rendering Process
+- React Fiber
+- Real DOM vs Virtual DOM vs Shadow DOM
+- Reflow & Repaint
+
+---
+
+### 🧩 Components & Rendering
+- Functional vs Class Components
+- Props
+- Component Composition
+- Conditional Rendering
+- Lists & Keys
+- Controlled vs Uncontrolled Components
+- Component Lifecycle (Class)
+- Rendering Behavior
+
+---
+
+### 🔗 Hooks
+- useState, useEffect, useRef
+- useContext, useReducer
+- useMemo, useCallback
+- useLayoutEffect
+- Custom Hooks
+
+---
+
+### 🗂️ State Management
+- Local State (useState, useReducer)
+- Lifting State Up
+- Global State
+- Context API
+- Redux / Redux Toolkit
+- Zustand & Other Libraries
+- Client State vs Server State
+
+---
+
+### 🔄 Data Fetching & Server State
+- Fetch API / Axios
+- useEffect Data Fetching
+- Loading & Error Handling
+- Caching Strategies
+- React Query (TanStack Query)
+- Mutations
+- Pagination & Infinite Scroll
+
+---
+
+### 🌐 Routing
+- React Router Basics
+- Route Parameters
+- Nested Routes
+- Protected Routes
+- Navigation (useNavigate)
+- Lazy Loading Routes
+
+---
+
+### ⚡ Performance Optimization
+- React.memo
+- useMemo vs useCallback
+- Code Splitting
+- Lazy Loading (React.lazy, Suspense)
+- Avoiding Unnecessary Re-renders
+- Key Optimization Techniques
+
+---
+
+### 🚀 Advanced Concepts
+- Higher Order Components (HOC)
+- Render Props
+- Compound Components
+- Portals
+- Error Boundaries
+- Reconciliation Deep Dive
+- Concurrent Rendering
+- Suspense
+- React Server Components
+
+---
+
+### 🔐 Security
+- Prevent XSS (Cross-Site Scripting)
+- Avoid dangerouslySetInnerHTML
+- Input Validation & Sanitization
+- Secure API Calls (Auth, Tokens)
+- Authentication & Authorization
+- HTTPS & Secure Headers
+
+---
+
+### ♿ Accessibility
+- Semantic HTML
+- ARIA Attributes
+- Keyboard Navigation
+- Screen Reader Support
+- Focus Management
+
+---
+
+### 🔍 SEO
+- Server-Side Rendering (SSR)
+- Static Site Generation (SSG)
+- Meta Tags & Head Management
+- Performance & Page Speed
+- Structured Data
+
+---
+
+### 🏗️ Architecture & Best Practices
+- Folder Structure
+- Separation of Concerns
+- Reusable Component Design
+- API Layer Design
+- Environment Variables
+- Clean Code Practices
+- Error Handling Strategies
+
+---
+
+### 🧠 Design Patterns
+- Presentational vs Container Components
+- Custom Hooks Pattern
+- Compound Components Pattern
+- Controlled vs Uncontrolled Pattern
+- Higher Order Components Pattern
+- Render Props Pattern
+- Provider Pattern
+
+---
+
+### 🔍 Ecosystem & Comparisons
+- React vs Angular vs Vue
+- React vs Next.js
+- When to Choose React
+- SPA vs MPA
+- CSR vs SSR vs SSG
+- Popular Libraries Overview
+- Tooling (Vite, Webpack, Babel)
