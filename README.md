@@ -66,6 +66,7 @@ It serves as both a learning resource and a preparation guide for developers aim
 - Controlled vs Uncontrolled Components
 - Component Lifecycle (Class)
 - Rendering Behavior
+- Synthetic Events
 
 ---
 
@@ -75,11 +76,14 @@ It serves as both a learning resource and a preparation guide for developers aim
 - useMemo, useCallback
 - useLayoutEffect
 - Custom Hooks
+- Rules of Hooks
+- Common Mistakes (Infinite loops, dependencies)
 
 ---
 
 ### 🗂️ State Management
 - Local State (useState, useReducer)
+- Props vs State
 - Lifting State Up
 - Global State
 - Context API
@@ -117,6 +121,8 @@ It serves as both a learning resource and a preparation guide for developers aim
 - Lazy Loading (React.lazy, Suspense)
 - Avoiding Unnecessary Re-renders
 - Key Optimization Techniques
+- React Profiler
+- React DevTools
 
 ---
 
@@ -155,6 +161,7 @@ It serves as both a learning resource and a preparation guide for developers aim
 ### 🔍 SEO
 - Server-Side Rendering (SSR)
 - Static Site Generation (SSG)
+- Hydration
 - Meta Tags & Head Management
 - Performance & Page Speed
 - Structured Data
@@ -186,7 +193,9 @@ It serves as both a learning resource and a preparation guide for developers aim
 ### 🔍 Ecosystem & Comparisons
 - React vs Angular vs Vue
 - React vs Next.js
+- Web Components
 - When to Choose React
+- Library vs Framework
 - SPA vs MPA
 - CSR vs SSR vs SSG
 - Popular Libraries Overview
