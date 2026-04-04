@@ -13,16 +13,15 @@ A structured overview of fundamental React concepts. Click any topic to explore 
 | # | 📌 Topic |
 |--|--------|
 | 1 | [What is React?](#1-what-is-react) |
-| 2 | [How React Works?](#2-how-react-works) |
+| 2 | [How React Works (Render Pipeline)?](#2-how-react-works-rendering-pipeline) |
 | 3 | [What are the advantages of React?](#3-what-are-the-advantages-of-react) |
 | 4 | [What are the disadvantages of React?](#4-what-are-the-disadvantages-of-react) |
 | 5 | [What are the major features of React?](#5-what-are-the-major-features-of-react)
 | 6 | [What is Virtual DOM and how does it work?](#6-what-is-virtual-dom-and-how-does-it-work) |
-| 8 | [What is Reconciliation (Diffing Algorithm)?](#7-what-is-reconciliation-diffing-algorithm) |
-| 9 | [What are the phases of React rendering?](#8-what-are-the-phases-of-react-rendering) |
-| 10 | [React Fiber](#react-fiber) |
-| 11 | [Real DOM vs Virtual DOM vs Shadow DOM](#real-dom-vs-virtual-dom-vs-shadow-dom) |
-| 12 | [Reflow & Repaint](#reflow--repaint) |
+| 7 | [What is Reconciliation (Diffing Algorithm)?](#7-what-is-reconciliation-diffing-algorithm) |
+| 8 | [React Fiber](#react-fiber) |
+| 9 | [Real DOM vs Virtual DOM vs Shadow DOM](#real-dom-vs-virtual-dom-vs-shadow-dom) |
+| 10 | [Reflow & Repaint](#reflow--repaint) |
 
 </details>
 
@@ -44,13 +43,39 @@ It focuses only on the **view layer (UI)** of an application, making it a librar
 
 ---
 
-## 2. How React Works?
+## 2. How React Works (rendering pipeline)?
 
-1. State or props change triggers a re-render.  
-2. React creates a new Virtual DOM tree.  
-3. It compares it with the previous Virtual DOM (reconciliation).  
-4. Only the changed parts are updated in the real DOM.  
-5. Updates are batched and optimized using techniques like concurrent rendering.  
+React rendering works in three main phases: Trigger, Render, and Commit, followed by the browser paint.
+
+---
+
+### 1. Trigger Phase
+- Starts when there is a state update, props change or parent component re-renders
+- It marks the component for update and schedules the work  
+
+---
+
+### 2. Render Phase (Reconciliation)
+- React re-runs component functions and creates a new Virtual DOM  
+- Compares it with the previous Virtual DOM (diffing algorithm)  
+- Identifies what has changed  
+
+**Key Points:**
+- No DOM updates happen here and no side effects (pure calculation phase)  
+- Can be paused or interrupted (React Fiber)  
+
+---
+
+### 3. Commit Phase
+- React updates the real DOM with only the necessary changes  
+- This phase is synchronous and cannot be interrupted
+- React also runs lifecycle methods and hooks here, like useLayoutEffect before paint and useEffect after paint.
+
+---
+
+### 4. Browser Paint
+- The browser updates the UI on the screen  
+- The user sees the final changes  
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -166,5 +191,63 @@ React uses heuristics like element type and keys to optimize the diffing process
 
 ---
 
-## 8. What are the phases of React rendering?
+## 8. What is React Fiber?
 
+Before React 16, React used a stack-based reconciliation algorithm where rendering was fully synchronous. Once rendering started, it couldn’t be paused, which could block the main thread and lead to UI freezes during heavy updates.
+
+React Fiber is a reimplementation of React’s core reconciliation algorithm. Instead of relying on the JavaScript call stack, it uses its own data structure called the Fiber tree to manage rendering work manually.
+
+The main goal of Fiber is to make rendering incremental, interruptible, and prioritizable. Instead of processing the entire component tree at once, React breaks rendering into smaller units of work and processes them step by step, allowing it to pause and resume work based on priority.
+
+### Fiber works in two phases:
+
+1. Render Phase (Reconciliation phase):  
+React builds a new Fiber tree and determines what changes are needed. This phase is asynchronous and interruptible, allowing React to yield control back to the browser.
+
+2. Commit Phase:  
+React applies the calculated changes to the DOM. This phase is synchronous and non-interruptible, ensuring consistency in the UI.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+## 9. What is reflow and repaint?
+### a. Reflow (Layout)
+
+Reflow (also known as layout) is the process where the browser recalculates the size, position, and structure of elements in the DOM.
+
+It occurs when changes affect the layout or geometry of the page, requiring the browser to recompute how elements are arranged.
+
+Reflow is computationally expensive because it may trigger recalculations for multiple elements, especially in complex layouts.
+
+### Common Causes of Reflow:
+- Changing layout-related properties (width, height, margin, padding)  
+- Adding or removing DOM elements  
+- Changing font size or content  
+- Resizing the browser window  
+- Accessing layout properties (offsetHeight, clientWidth, getBoundingClientRect)  
+
+### b. Repaint
+
+Repaint is the process where the browser updates the visual appearance of elements without affecting their layout.
+
+It occurs when only styles that do not impact layout are changed.
+
+Repaint is less expensive than reflow but can still impact performance if triggered frequently.
+
+
+### Key Points:
+- Repaint does not trigger reflow  
+- Reflow always triggers repaint  
+
+
+### Common Causes of Repaint:
+- Changing color  
+- Changing background  
+- Applying box-shadow  
+- Changing visibility  
+- Updating outline  
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
